@@ -1,18 +1,31 @@
 #!/usr/bin/env python3
-"""Lint Markdown prose against standards/writing.md. Reports findings, never edits.
+"""Lint Markdown prose against the writing-standard skill. Reports findings, never edits.
 
 Usage:
     python3 scripts/writing_lint.py FILE [FILE ...]
     python3 scripts/writing_lint.py --json FILE
     cat draft.md | python3 scripts/writing_lint.py
 
-Each finding is one line: path:line: rule: detail. Exit 0 always. The linter catches
-the mechanical surface. It cannot catch a buried point or a cryptic heading, so a
-human still reads the text.
+Each finding is one line: path:line: rule: Rule N. detail. N is the rule number in the
+writing-standard skill (see STANDARD_RULE). Exit 0 always. The linter catches the
+mechanical surface. It cannot catch a buried point or a cryptic heading, so a human
+still reads the text.
 """
 import json
 import re
 import sys
+
+# Linter rule slug, then the rule number in the writing-standard skill it enforces.
+STANDARD_RULE = {
+    "heading-gloss": 5, "heading-long": 6, "heading-restated": 5,
+    "table-wide": 7, "table-sentence": 7, "table-break": 7,
+    "hard-wrap": 9,
+    "em-dash": 3, "semicolon": 3, "and-or": 3, "slash": 3, "colon-stack": 3, "parenthetical": 3,
+    "symbol": 6, "not-x-but-y": 5, "bold-seasoning": 5, "bold-heading": 5,
+    "filler": 4, "marketing": 4, "pre-frame": 4, "praise-opener": 5,
+    "long-word": 10, "phrasal-verb": 10, "nominalization": 10, "passive": 10, "rule-of-three": 5,
+    "long-sentence": 2, "comma-stack": 2,
+}
 
 # Rule 4 in the standard. Words that carry no fact.
 FILLER = [
@@ -67,7 +80,7 @@ PP_IRREG = r"(?:done|made|sent|read|built|kept|held|set|put|run|written|shown|gi
 PASSIVE = re.compile(rf"\b{BE}\s+(?:\w+ed|{PP_IRREG})\s+by\b", re.I)
 SYMBOLS = {"→": "becomes", "⇒": "becomes", "←": "comes from", "∪": "or", "∩": "and", "≠": "is not", "≈": "about"}
 
-SENTENCE_MAX = 20  # words. The standard allows 25 for descriptive prose; 20 is the flag.
+SENTENCE_MAX = 20  # words. Rule 2 allows 25 for descriptive prose. 20 is the flag.
 COMMA_MAX = 1
 
 
@@ -190,7 +203,7 @@ def lint_lines(lines):
         if text.count(":") > 1:
             yield i, "colon-stack", "More than one colon in a line. One colon, only for a list or quote."
         if re.match(r"^\s*\(.*\)\s*$", text) is None and re.search(r"\([^)]{40,}\)", text):
-            yield i, "parenthetical", "Long parenthetical. It is an em-dash aside in a different hat. Use a full stop."
+            yield i, "parenthetical", "Long parenthetical. It is an em-dash aside with different punctuation. Use a full stop."
         for sym, word in SYMBOLS.items():
             if sym in text:
                 yield i, "symbol", f"'{sym}' in prose. Write '{word}'."
@@ -232,7 +245,8 @@ def lint_lines(lines):
 
 
 def lint_text(text):
-    return [{"line": ln, "rule": rule, "detail": detail} for ln, rule, detail in lint_lines(text.splitlines(True))]
+    return [{"line": ln, "rule": rule, "standard_rule": STANDARD_RULE[rule], "detail": f"Rule {STANDARD_RULE[rule]}. {detail}"}
+            for ln, rule, detail in lint_lines(text.splitlines(True))]
 
 
 def main(argv):
@@ -257,7 +271,8 @@ def main(argv):
         for x in findings:
             counts[x["rule"]] = counts.get(x["rule"], 0) + 1
         summary = ", ".join(f"{k} {v}" for k, v in sorted(counts.items(), key=lambda kv: -kv[1]))
-        print(f"{f}: {len(findings)} findings ({summary})")
+        noun = "finding" if len(findings) == 1 else "findings"
+        print(f"{f}: {len(findings)} {noun} ({summary})")
     return 0
 
 
