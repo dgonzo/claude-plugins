@@ -26,6 +26,8 @@ flowchart TD
 | Skill | `writing-standard` | the prose rules and the check before you send |
 | Skill | `working-style` | session behaviour: answer first, no narration, do the work, hold the objective |
 | Skill | `improve-readability` | review one file, report findings, never edit |
+| Skill | `review-prose` | review a diff, a ref or a PR, report findings, never edit |
+| Command | `/writing:lint <file>` | run the linter on one file and print its output |
 | Card | `standard/card.md` | the rules that hold before any skill loads |
 | Script | `scripts/writing_lint.py` | the mechanical rules, exit 0 always |
 | Hook | SessionStart | prints the card into the session context |
