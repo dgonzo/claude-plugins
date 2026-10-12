@@ -5,7 +5,7 @@
     {
       "name": "writing",
       "source": "./plugins/writing",
-      "description": "House writing standard, working style, prose linter and lint hook. Works in chat, Cowork and Claude Code."
+      "description": "House writing standard, working style, readability and prose reviews, linter and hooks. Works in chat, Cowork and Claude Code."
     }
   ]
 }
