@@ -1,0 +1,11 @@
+{
+  "name": "dgonzo",
+  "owner": { "name": "David Gonzalez" },
+  "plugins": [
+    {
+      "name": "writing",
+      "source": "./plugins/writing",
+      "description": "House writing standard, working style, prose linter and lint hook. Works in chat, Cowork and Claude Code."
+    }
+  ]
+}
