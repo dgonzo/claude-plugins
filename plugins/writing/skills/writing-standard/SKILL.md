@@ -186,6 +186,8 @@ The diagram carries the point. If the prose underneath still has to explain the 
 
 Use plain Mermaid fences in Markdown. Use SVG only when Mermaid cannot express it.
 
+Some chat surfaces show a Mermaid fence as text. The session context says so when that is the case. Then draw the diagram as Unicode box-drawing inside a plain code fence, or use a table. A `WRITING.md` can force the same for one repo.
+
 ### Tables beat prose when they are clear
 
 Tables are good. Unclear tables are not. The bar is high.

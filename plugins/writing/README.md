@@ -53,7 +53,7 @@ A plain Markdown file at the repo root. The skills read it before writing and it
 Audience: <who reads the output of this repo>.
 Terms: <project IDs and their plain names, or a link to a glossary>.
 Added rules: <one per line, or none>.
-Relaxed rules: <one per line, or none>.
+Relaxed rules: <one per line, or none. Example: no Mermaid, draw diagrams as Unicode box-drawing>.
 Project linter: <command, or none>.
 ```
 
