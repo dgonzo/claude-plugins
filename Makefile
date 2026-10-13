@@ -6,7 +6,7 @@ pack:
 	scripts/pack.sh
 
 release:
-	@test -z "$$(git status --porcelain)" || { echo "working tree is not clean"; exit 1; }
+	@test -z "$$(git status --porcelain --untracked-files=no)" || { echo "working tree has uncommitted changes"; exit 1; }
 	@git rev-parse "v$(VERSION)" >/dev/null 2>&1 && { echo "tag v$(VERSION) exists"; exit 1; } || true
 	scripts/pack.sh
 	git tag -a "v$(VERSION)" -m "writing $(VERSION)"
