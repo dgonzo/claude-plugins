@@ -1,6 +1,6 @@
 {
   "name": "writing",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "House writing standard and working style for every surface: chat, Cowork and Claude Code. Four skills (writing-standard, working-style, improve-readability, review-prose), a lint command, a fallback card loaded at session start, a prose linter, and a hook that lints every Markdown file an agent writes. Project tweaks go in a WRITING.md at the repo root.",
   "author": { "name": "David Gonzalez" },
   "repository": "https://github.com/dgonzo/claude-plugins",
