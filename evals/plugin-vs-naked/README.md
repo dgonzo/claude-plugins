@@ -71,6 +71,33 @@ The full setup costs three times the plugin alone. Its extra turns load skills f
 | p6-pr | 1 | 0 | 15 |
 | p7-rewrite | 2 | 2 | 2 |
 
+## Raw model without Claude Code's prompt
+
+The naked arm still runs Claude Code's built-in system prompt. That prompt asks for a recommendation and not a survey. It asks for plain statements without hedging. It says nothing about em-dashes. The raw arm replaces it with a neutral two-sentence prompt. It also runs with `--safe-mode` and without the parent session's `CLAUDE_*` environment variables.
+
+| Measure | Raw | Naked |
+|---|---|---|
+| Linter findings per 100 words | 3.5 | 3.4 |
+| Mean words per output | 358 | 327 |
+| Mean words in first sentence | 19.1 | 21.2 |
+| Outputs with a table | 3 of 16 | 2 of 16 |
+| Em-dashes in all outputs | 0 | 0 |
+
+The raw model writes like the naked arm. Neither config nor Claude Code's prompt explains the missing em-dashes. The model in these runs is Claude Opus 5.5. It does not use them in this task set.
+
+## Agentic task
+
+Prompt p8 gives the session a small Python repo whose tests fail. Float conversion truncates 0.29 dollars to 28 cents. The session runs the tests, fixes the bug and reports. The report is the scored text. Each arm ran it twice.
+
+| Arm | Findings per 100 words | Em-dashes | Cost per run |
+|---|---|---|---|
+| Plugin alone | 0.5 and 1.8 | 0 | $0.16 |
+| Full setup | 0.9 and 1.0 | 0 | $0.36 |
+| Naked | 5.0 and 5.6 | 0 | $0.10 |
+| Raw | 3.1 and 4.7 | 0 | $0.14 |
+
+Every arm found and fixed the bug. The naked and raw reports used arrows and math symbols in prose, colons after bold labels and long sentences. Three of those four reports closed with an offer to do more work.
+
 ## What the naked arm did not show
 
 The bare model avoided several failures the plugin targets. It used no em-dashes and no praise openers. It ended no reply with a menu. It put the recommendation first in p3 and the blocker first in p4. It paired ticket IDs with plain names in p4.
@@ -106,6 +133,7 @@ Both are worth a linter fix. Neither changes the result.
 
 - The full setup and the plugin-alone arm differ in plugin version as well as in what else loads.
 - Two runs per prompt is a small sample.
+- The runner now uses `bypassPermissions` so p8 can run its tests. The first 42 runs used `acceptEdits`. Prompts p1 to p7 need no tool beyond Write.
 - The linter is the plugin's own instrument. It measures the surface rules the plugin teaches. It cannot score a buried point. The first-sentence length is a rough proxy for that.
 - The full-setup arm tried a web search in p3 and was denied. In an interactive session it would add sources and cost.
 
@@ -115,7 +143,8 @@ Both are worth a linter fix. Neither changes the result.
 - [runs/](runs/) has one folder per arm. Each reply is a `.md` file. Raw CLI output is `.json`. Design docs are `.file.md`.
 - [results.csv](results.csv) has one row per output. [aggregate.json](aggregate.json) has the arm totals.
 - [run_one.sh](run_one.sh) runs one arm, prompt and repeat.
-- [jobs.txt](jobs.txt) lists the full-setup and naked runs. [jobs-plugin-only.txt](jobs-plugin-only.txt) lists the plugin-alone runs.
+- [jobs.txt](jobs.txt) lists the full-setup and naked runs. [jobs-plugin-only.txt](jobs-plugin-only.txt) lists the plugin-alone runs. [jobs-raw.txt](jobs-raw.txt) lists the raw runs. [jobs-p8.txt](jobs-p8.txt) lists the agentic runs.
+- [fixtures/p8-agentic/](fixtures/p8-agentic/) contains the buggy repo for p8. The runner copies it into the temp folder.
 - [score.py](score.py) rescores every output.
 
 To rerun, from this folder:
@@ -123,5 +152,7 @@ To rerun, from this folder:
 ```
 xargs -P 7 -L 1 ./run_one.sh < jobs.txt
 PLUGIN_DIR=<path to plugins/writing> xargs -P 7 -L 1 ./run_one.sh < jobs-plugin-only.txt
+xargs -P 7 -L 1 ./run_one.sh < jobs-raw.txt
+PLUGIN_DIR=<path to plugins/writing> xargs -P 8 -L 1 ./run_one.sh < jobs-p8.txt
 python3 score.py
 ```

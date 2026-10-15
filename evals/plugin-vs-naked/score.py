@@ -39,7 +39,7 @@ def score(path, arm, prompt, rep, kind):
     return row
 
 
-ARMS = [a for a in ("plugin", "plugin-only", "naked") if (E / "runs" / a).is_dir()]
+ARMS = [a for a in ("plugin", "plugin-only", "naked", "raw") if (E / "runs" / a).is_dir()]
 rows = []
 for arm in ARMS:
     for p in sorted((E / "runs" / arm).glob("*-r[0-9].md")):
