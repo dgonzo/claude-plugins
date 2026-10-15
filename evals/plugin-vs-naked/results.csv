@@ -1,0 +1,73 @@
+arm,prompt,rep,kind,words,findings,per100w,first_sentence_words,em_dash,semicolon,mermaid,tables,box_drawing,praise_opener,ends_offer,by_rule
+plugin,p1-explain,1,reply,417,2,0.5,13,0,0,0,2,1,0,0,"{""table-sentence"": 2}"
+plugin,p1-explain,2,reply,410,1,0.2,15,0,0,0,2,1,0,0,"{""passive"": 1}"
+plugin,p2-debug,1,reply,356,3,0.8,7,0,1,0,1,0,0,0,"{""table-sentence"": 1, ""colon-stack"": 1, ""filler"": 1}"
+plugin,p2-debug,2,reply,330,3,0.9,11,0,0,0,1,0,0,0,"{""colon-stack"": 1, ""long-sentence"": 1, ""comma-stack"": 1}"
+plugin,p3-decision,1,reply,403,3,0.7,15,0,0,0,1,1,0,0,"{""table-sentence"": 1, ""comma-stack"": 2}"
+plugin,p3-decision,2,reply,451,6,1.3,38,0,0,0,1,1,0,0,"{""long-sentence"": 1, ""bold-seasoning"": 3, ""comma-stack"": 2}"
+plugin,p4-status,1,reply,208,2,1.0,5,0,0,0,1,0,0,0,"{""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin,p4-status,2,reply,195,4,2.1,7,0,0,0,1,0,0,0,"{""bold-heading"": 1, ""comma-stack"": 1, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin,p5-designdoc,1,reply,22,0,0.0,7,0,0,0,0,0,0,0,{}
+plugin,p5-designdoc,2,reply,25,0,0.0,7,0,0,0,0,0,0,0,{}
+plugin,p6-pr,1,reply,184,0,0.0,10,0,0,0,1,0,0,0,{}
+plugin,p6-pr,2,reply,173,0,0.0,10,0,0,0,1,0,0,0,{}
+plugin,p7-rewrite,1,reply,30,1,3.3,8,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin,p7-rewrite,2,reply,36,1,2.8,7,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin,p8-agentic,1,reply,228,2,0.9,9,0,0,0,1,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 1}"
+plugin,p8-agentic,2,reply,206,2,1.0,13,0,0,0,1,0,0,0,"{""filler"": 2}"
+plugin,p5-designdoc,1,file,473,0,0.0,18,0,0,1,4,0,0,0,{}
+plugin,p5-designdoc,2,file,466,0,0.0,12,0,0,1,5,0,0,0,{}
+plugin-only,p1-explain,1,reply,497,0,0.0,12,0,0,0,1,1,0,0,{}
+plugin-only,p1-explain,2,reply,458,4,0.9,13,0,0,0,2,1,0,0,"{""comma-stack"": 1, ""bold-seasoning"": 2, ""filler"": 1}"
+plugin-only,p2-debug,1,reply,321,4,1.2,12,0,1,0,2,0,0,0,"{""table-sentence"": 3, ""filler"": 1}"
+plugin-only,p2-debug,2,reply,315,3,1.0,20,0,1,0,1,0,0,0,"{""filler"": 1, ""long-sentence"": 1, ""bold-seasoning"": 1}"
+plugin-only,p3-decision,1,reply,353,5,1.4,23,0,0,0,2,1,0,0,"{""long-sentence"": 3, ""table-sentence"": 1, ""bold-seasoning"": 1}"
+plugin-only,p3-decision,2,reply,334,4,1.2,10,0,0,0,1,1,0,0,"{""table-sentence"": 1, ""slash"": 1, ""comma-stack"": 1, ""bold-seasoning"": 1}"
+plugin-only,p4-status,1,reply,168,3,1.8,13,0,0,0,1,0,0,0,"{""bold-heading"": 1, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin-only,p4-status,2,reply,167,7,4.2,6,0,0,0,1,0,0,0,"{""bold-heading"": 3, ""table-sentence"": 2, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin-only,p5-designdoc,1,reply,23,0,0.0,18,0,0,0,0,0,0,0,{}
+plugin-only,p5-designdoc,2,reply,30,0,0.0,7,0,0,0,0,0,0,0,{}
+plugin-only,p6-pr,1,reply,152,1,0.7,13,0,0,0,1,0,0,0,"{""table-sentence"": 1}"
+plugin-only,p6-pr,2,reply,238,0,0.0,13,0,0,0,1,0,0,0,{}
+plugin-only,p7-rewrite,1,reply,28,1,3.6,8,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin-only,p7-rewrite,2,reply,29,1,3.4,8,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin-only,p8-agentic,1,reply,224,4,1.8,5,0,0,0,1,0,0,0,"{""bold-seasoning"": 1, ""filler"": 1, ""long-sentence"": 1, ""comma-stack"": 1}"
+plugin-only,p8-agentic,2,reply,187,1,0.5,5,0,0,0,1,0,0,0,"{""bold-seasoning"": 1}"
+plugin-only,p5-designdoc,1,file,372,0,0.0,16,0,0,1,3,0,0,0,{}
+plugin-only,p5-designdoc,2,file,374,0,0.0,10,0,0,1,3,0,0,1,{}
+naked,p1-explain,1,reply,564,14,2.5,27,0,0,0,0,0,0,0,"{""long-sentence"": 5, ""slash"": 1, ""em-dash"": 1, ""bold-seasoning"": 3, ""comma-stack"": 2, ""filler"": 2}"
+naked,p1-explain,2,reply,653,24,3.7,26,0,0,0,0,0,0,0,"{""long-sentence"": 7, ""comma-stack"": 9, ""slash"": 2, ""filler"": 2, ""bold-seasoning"": 2, ""em-dash"": 1, ""parenthetical"": 1}"
+naked,p2-debug,1,reply,438,19,4.3,18,0,3,0,0,0,0,0,"{""colon-stack"": 3, ""filler"": 2, ""long-sentence"": 6, ""comma-stack"": 4, ""semicolon"": 1, ""bold-seasoning"": 2, ""em-dash"": 1}"
+naked,p2-debug,2,reply,386,12,3.1,19,0,1,0,0,0,0,0,"{""colon-stack"": 4, ""comma-stack"": 1, ""long-sentence"": 3, ""bold-seasoning"": 4}"
+naked,p3-decision,1,reply,425,18,4.2,25,0,0,0,0,0,0,0,"{""long-sentence"": 5, ""bold-seasoning"": 4, ""slash"": 3, ""comma-stack"": 3, ""em-dash"": 1, ""parenthetical"": 1, ""filler"": 1}"
+naked,p3-decision,2,reply,583,24,4.1,24,0,0,0,0,1,0,0,"{""heading-gloss"": 1, ""long-sentence"": 8, ""comma-stack"": 5, ""bold-seasoning"": 4, ""slash"": 3, ""filler"": 2, ""em-dash"": 1}"
+naked,p4-status,1,reply,168,9,5.4,31,0,0,0,0,0,0,0,"{""em-dash"": 1, ""bold-heading"": 5, ""hard-wrap"": 1, ""comma-stack"": 1, ""bold-seasoning"": 1}"
+naked,p4-status,2,reply,211,10,4.7,38,0,0,0,0,0,0,0,"{""em-dash"": 1, ""bold-heading"": 4, ""colon-stack"": 1, ""filler"": 1, ""long-sentence"": 2, ""bold-seasoning"": 1}"
+naked,p5-designdoc,1,reply,28,2,7.1,27,0,0,0,0,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 1}"
+naked,p5-designdoc,2,reply,26,2,7.7,25,0,0,0,0,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 1}"
+naked,p6-pr,1,reply,211,7,3.3,9,0,1,0,0,0,0,0,"{""long-sentence"": 1, ""bold-heading"": 2, ""filler"": 1, ""comma-stack"": 1, ""bold-seasoning"": 1, ""semicolon"": 1}"
+naked,p6-pr,2,reply,238,8,3.4,2,0,0,0,0,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 3, ""bold-heading"": 2, ""bold-seasoning"": 1, ""filler"": 1}"
+naked,p7-rewrite,1,reply,28,1,3.6,16,0,0,0,0,0,0,0,"{""filler"": 1}"
+naked,p7-rewrite,2,reply,25,1,4.0,16,0,0,0,0,0,0,0,"{""filler"": 1}"
+naked,p8-agentic,1,reply,260,13,5.0,5,0,1,0,0,0,0,0,"{""colon-stack"": 2, ""parenthetical"": 1, ""filler"": 3, ""comma-stack"": 3, ""long-sentence"": 2, ""semicolon"": 1, ""bold-seasoning"": 1}"
+naked,p8-agentic,2,reply,233,13,5.6,10,0,0,0,0,0,0,0,"{""colon-stack"": 2, ""filler"": 2, ""long-sentence"": 3, ""symbol"": 2, ""comma-stack"": 3, ""bold-seasoning"": 1}"
+naked,p5-designdoc,1,file,620,15,2.4,20,0,4,0,1,1,0,0,"{""heading-gloss"": 1, ""slash"": 1, ""bold-seasoning"": 3, ""comma-stack"": 6, ""long-sentence"": 2, ""rule-of-three"": 1, ""colon-stack"": 1}"
+naked,p5-designdoc,2,file,631,13,2.1,17,0,0,0,2,1,0,0,"{""heading-gloss"": 1, ""slash"": 2, ""comma-stack"": 6, ""long-sentence"": 1, ""symbol"": 1, ""bold-seasoning"": 2}"
+raw,p1-explain,1,reply,601,23,3.8,27,0,0,0,0,0,0,0,"{""long-sentence"": 7, ""em-dash"": 1, ""comma-stack"": 7, ""slash"": 2, ""bold-seasoning"": 2, ""parenthetical"": 2, ""bold-heading"": 1, ""filler"": 1}"
+raw,p1-explain,2,reply,678,30,4.4,23,0,0,0,0,0,0,0,"{""long-sentence"": 5, ""comma-stack"": 4, ""em-dash"": 2, ""bold-seasoning"": 2, ""bold-heading"": 7, ""hard-wrap"": 7, ""slash"": 1, ""filler"": 2}"
+raw,p2-debug,1,reply,476,23,4.8,18,0,4,0,0,0,0,0,"{""colon-stack"": 4, ""comma-stack"": 5, ""filler"": 3, ""long-sentence"": 6, ""bold-seasoning"": 3, ""semicolon"": 1, ""em-dash"": 1}"
+raw,p2-debug,2,reply,404,15,3.7,17,0,2,0,0,0,0,0,"{""colon-stack"": 3, ""symbol"": 1, ""comma-stack"": 5, ""bold-seasoning"": 3, ""long-sentence"": 3}"
+raw,p3-decision,1,reply,614,27,4.4,22,0,0,0,1,1,0,0,"{""comma-stack"": 7, ""table-sentence"": 4, ""colon-stack"": 1, ""parenthetical"": 1, ""filler"": 2, ""long-sentence"": 7, ""bold-seasoning"": 2, ""slash"": 2, ""em-dash"": 1}"
+raw,p3-decision,2,reply,551,20,3.6,23,0,0,0,0,1,0,0,"{""heading-long"": 1, ""long-sentence"": 4, ""comma-stack"": 6, ""slash"": 3, ""bold-seasoning"": 4, ""colon-stack"": 1, ""symbol"": 1}"
+raw,p4-status,1,reply,120,7,5.8,12,0,0,0,0,0,0,0,"{""bold-heading"": 5, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+raw,p4-status,2,reply,181,7,3.9,15,0,0,0,0,0,0,0,"{""bold-heading"": 5, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+raw,p5-designdoc,1,reply,36,2,5.6,35,0,0,0,0,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 1}"
+raw,p5-designdoc,2,reply,32,2,6.2,31,0,0,0,0,0,0,0,"{""long-sentence"": 1, ""comma-stack"": 1}"
+raw,p6-pr,1,reply,302,8,2.6,2,0,0,0,0,0,0,0,"{""long-sentence"": 3, ""comma-stack"": 2, ""bold-heading"": 2, ""bold-seasoning"": 1}"
+raw,p6-pr,2,reply,265,6,2.3,21,0,0,0,0,0,0,0,"{""long-sentence"": 2, ""bold-heading"": 2, ""comma-stack"": 1, ""bold-seasoning"": 1}"
+raw,p7-rewrite,1,reply,31,1,3.2,17,0,0,0,0,0,0,0,"{""filler"": 1}"
+raw,p7-rewrite,2,reply,25,1,4.0,16,0,0,0,0,0,0,0,"{""filler"": 1}"
+raw,p8-agentic,1,reply,259,8,3.1,5,0,0,0,0,0,0,0,"{""colon-stack"": 2, ""filler"": 1, ""symbol"": 1, ""long-sentence"": 3, ""bold-seasoning"": 1}"
+raw,p8-agentic,2,reply,235,11,4.7,5,0,0,0,0,0,0,0,"{""colon-stack"": 2, ""filler"": 1, ""symbol"": 2, ""long-sentence"": 2, ""comma-stack"": 3, ""bold-seasoning"": 1}"
+raw,p5-designdoc,1,file,689,14,2.0,9,0,4,0,1,1,0,1,"{""heading-gloss"": 1, ""filler"": 1, ""slash"": 2, ""bold-seasoning"": 3, ""comma-stack"": 5, ""rule-of-three"": 1, ""symbol"": 1}"
+raw,p5-designdoc,2,file,728,13,1.8,17,0,0,0,1,1,0,1,"{""heading-gloss"": 1, ""slash"": 2, ""colon-stack"": 1, ""bold-seasoning"": 3, ""comma-stack"": 4, ""symbol"": 1, ""long-sentence"": 1}"

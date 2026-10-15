@@ -1,11 +1,17 @@
 {
   "name": "dgonzo",
-  "owner": { "name": "David Gonzalez" },
+  "description": "Plugins by David Gonzalez (dgonzo). One so far: a house writing standard and working style for chat, Cowork and Claude Code.",
+  "owner": { "name": "David Gonzalez", "url": "https://github.com/dgonzo" },
   "plugins": [
     {
       "name": "writing",
+      "displayName": "Writing",
       "source": "./plugins/writing",
-      "description": "House writing standard, working style, readability and prose reviews, linter and hooks. Works in chat, Cowork and Claude Code."
+      "description": "House writing standard, working style, readability and prose reviews, linter and hooks. Works in chat, Cowork and Claude Code.",
+      "author": { "name": "David Gonzalez", "url": "https://github.com/dgonzo" },
+      "homepage": "https://github.com/dgonzo/dgonzo-plugins/tree/main/plugins/writing",
+      "category": "productivity",
+      "tags": ["writing", "style", "readability", "lint"]
     }
   ]
 }

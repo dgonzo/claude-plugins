@@ -30,7 +30,7 @@ Prose files are Markdown and plain text, including Quarto and MDX. Skip code and
 python3 "${CLAUDE_PLUGIN_ROOT}/scripts/writing_lint.py" <files>
 ```
 
-   For a PR, the working tree may hold another version of each file. Lint the PR's own text through stdin instead. The body first, then each changed prose file at the PR head:
+   For a PR, the working tree may have another version of each file. Lint the PR's own text through stdin instead. The body first, then each changed prose file at the PR head:
 
 ```
 gh pr view <n> --json body -q .body | python3 "${CLAUDE_PLUGIN_ROOT}/scripts/writing_lint.py"
@@ -43,7 +43,7 @@ git show FETCH_HEAD:<file> | python3 "${CLAUDE_PLUGIN_ROOT}/scripts/writing_lint
    - does each new heading parse cold
    - does any new paragraph want to be a table or diagram
    - is anything said twice
-   - does every ID and person carry a plain name on first use
+   - does every ID and person have a plain name on first use
    - does any sentence break the register rule
 5. Report in this order:
    - one sentence on the biggest defect

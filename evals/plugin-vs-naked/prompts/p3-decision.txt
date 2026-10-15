@@ -1,0 +1,1 @@
+We need a message queue between our order service and three consumers (billing, email, analytics). About 2,000 messages per second at peak, messages must not be lost, ordering only matters per customer, team of 4 engineers, everything runs on AWS. SQS/SNS, Kafka (MSK), or RabbitMQ? Which one should we pick?

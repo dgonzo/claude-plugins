@@ -1,0 +1,6 @@
+Write my weekly status update for my manager Priya. Facts:
+- ENG-412 done: billing tables migrated to the new schema, verified on prod Tuesday.
+- ENG-415 blocked: the SSO change waits on a security review from the platform team (owner: Marcus). Review requested 9 days ago, no response.
+- OKR-3 (cut p95 checkout latency to 300ms): now at 410ms, down from 520ms.
+- ENG-420 started: dashboard for refund rates, ETA next Friday.
+- I'm out Monday.

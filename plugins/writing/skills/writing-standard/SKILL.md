@@ -7,7 +7,7 @@ description: House writing rules for every piece of prose. Load before writing o
 
 Some readers decode text slowly. Clarity is a reading requirement, not a preference.
 
-Decoding text costs the reader real effort. Every unnecessary word spends that effort for nothing. A run-on sentence spends a lot of it. Structure carries meaning at a fraction of the cost. A diagram or a clear table beats paragraphs whenever the content has shape. Rule 7 sets the order.
+Decoding text costs the reader real effort. Every unnecessary word spends that effort for nothing. A run-on sentence spends a lot of it. Structure gives the same meaning at a fraction of the cost. A diagram or a clear table beats paragraphs whenever the content has shape. Rule 7 sets the order.
 
 Your default style fails the reader in two ways. It is hard to parse. Once parsed, the point turns out to be buried under prose that added nothing. Both are defects. Fix them at the first draft. Do not write loose prose and then tidy it.
 
@@ -73,13 +73,13 @@ Write "and" or "or". "and/or" is banned outright.
 
 ## Rule 4: delete these words
 
-Intensifiers and hedges that carry no fact:
+Intensifiers and hedges that add no fact:
 
 genuinely, deliberately, exactly, literally, honestly, truly, actually, simply, just, really, very, quite, fairly, somewhat, essentially, basically, fundamentally, arguably, notably, particularly, incredibly, remarkably, crucial, vital, key (as an adjective).
 
 Marketing adjectives:
 
-robust, seamless, comprehensive, powerful, elegant, cutting-edge, best-in-class, battle-tested. The linter carries the full list.
+robust, seamless, comprehensive, powerful, elegant, cutting-edge, best-in-class, battle-tested. The linter has the full list.
 
 Dramatic pre-frames. Delete the whole phrase, never replace it:
 
@@ -148,7 +148,7 @@ A heading is a label. A noun phrase, or a fact in the form "Name: fact". Never a
 | Open: what each pillar still owes | Open items by pillar |
 | The build is red | Build: red |
 
-Name things in plain words. Do not force the reader to hold a key of codes in the reader's head. Rule 11 says how to pair a code with its name.
+Name things in plain words. Do not force the reader to remember a key of codes. Rule 11 says how to pair a code with its name.
 
 No math or set symbols in prose. Write "either on a shelf or scanned", not a union symbol. Write "becomes", not an arrow.
 
@@ -182,7 +182,7 @@ Plain words inside nodes. If the project uses codes, put the plain name in the n
 
 No forced theme settings or init blocks. They fight the reader's editor theme.
 
-The diagram carries the point. If the prose underneath still has to explain the whole thing, the diagram failed. Delete it or fix it.
+The diagram makes the point. If the prose underneath still has to explain the whole thing, the diagram failed. Delete it or fix it.
 
 Use plain Mermaid fences in Markdown. Use SVG only when Mermaid cannot express it.
 
@@ -200,13 +200,13 @@ Cells are fragments, not sentences. If a cell needs a sentence, the table is the
 
 No bullets and no line breaks inside a cell.
 
-Every column holds the same kind of thing from top to bottom. No mixing a status with a comment.
+Every column contains the same kind of thing from top to bottom. No mixing a status with a comment.
 
 Headers name things in plain words.
 
 Most important row first. Never rely on the reader scanning to the bottom for the point.
 
-Never make the reader hold a key in the reader's head. A code in a cell gets its plain name in the same table.
+Never make the reader remember a key. A code in a cell gets its plain name in the same table.
 
 ### Prose
 
@@ -214,7 +214,7 @@ Short paragraphs. One idea each. Blank line between them.
 
 Never a paragraph longer than four sentences.
 
-Bullets carry one idea each. One level of nesting, never two.
+Each bullet has one idea. One level of nesting, never two.
 
 ### Steps
 
@@ -261,6 +261,8 @@ Use the short common word.
 | to | in order to |
 | because | due to the fact that |
 | contact | reach out |
+| contains, has, lists | holds, carries |
+| applies | holds, as in "the rule holds" |
 
 One name for one thing. Do not call the same item by two names in one document.
 
@@ -309,14 +311,14 @@ Good: "open items by pillar"
 
 Two data sources with different populations never share a number without a sources table first.
 
-| Column | Holds |
+| Column | Contents |
 |---|---|
 | Source | where the data comes from |
 | Population | who or what it covers |
-| Contents | what it holds |
+| Contents | what it contains |
 | Used in | which section reads it |
 
-A section that joins them says so in its first line and names the join key. A number derived from one source and applied to another carries "projected" or "estimated" and the method.
+A section that joins them says so in its first line and names the join key. A number derived from one source and applied to another is labelled "projected" or "estimated" and the method.
 
 ## Rule 14: the reader has no context
 
@@ -332,16 +334,16 @@ Before writing, look for `WRITING.md` in the working folder or the repo root. If
 
 Run this on every message and every document. It is not optional. The user will not run a review to catch what you shipped.
 
-1. Could a diagram or a clear table carry this better than the paragraphs you wrote? If yes, rewrite it as one. Do not ship the paragraphs because they already exist.
+1. Could a diagram or a clear table show this better than the paragraphs you wrote? If yes, rewrite it as one. Do not ship the paragraphs because they already exist.
 2. Is the first sentence the point?
 3. Does any sentence have more than one comma? Split it.
 4. Any em-dash aside, semicolon or "and/or"? Remove it.
 5. Any word from Rule 4 or long word from Rule 10? Delete or replace it.
 6. Does any sentence restate its neighbour? Cut one.
 7. Read each heading cold. Does it parse alone? Is it a label, not a phrase?
-8. If you used a table, does every cell hold one fact and no sentence?
-9. If you used a diagram, does it carry the point without the prose underneath?
-10. Does every ID, person and initialism carry its plain name on first use?
+8. If you used a table, does every cell contain one fact and no sentence?
+9. If you used a diagram, does it make the point without the prose underneath?
+10. Does every ID, person and initialism have its plain name on first use?
 11. Any metaphor, personification or narrative voice? Any idiom? Replace it with the fact.
 12. Remove one word at a time. If the meaning survives, it was wrong.
 

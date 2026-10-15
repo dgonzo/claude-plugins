@@ -1,0 +1,8 @@
+raw p8-agentic 1
+raw p8-agentic 2
+naked p8-agentic 1
+naked p8-agentic 2
+plugin-only p8-agentic 1
+plugin-only p8-agentic 2
+plugin p8-agentic 1
+plugin p8-agentic 2

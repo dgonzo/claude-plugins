@@ -1,0 +1,22 @@
+Write the pull request description for this diff. Output only the description.
+
+diff --git a/app/cache.py b/app/cache.py
+@@ -12,9 +12,17 @@ class PriceCache:
+-    def get(self, sku):
+-        return self._store.get(sku)
++    def get(self, sku):
++        entry = self._store.get(sku)
++        if entry is None:
++            return None
++        if time.time() - entry.fetched_at > self.ttl_seconds:
++            self._store.pop(sku, None)
++            return None
++        return entry.price
+@@ -30,6 +38,7 @@ class PriceCache:
+     def put(self, sku, price):
+-        self._store[sku] = price
++        self._store[sku] = Entry(price=price, fetched_at=time.time())
+diff --git a/app/settings.py b/app/settings.py
++PRICE_CACHE_TTL_SECONDS = int(os.getenv("PRICE_CACHE_TTL_SECONDS", "300"))
+
+Context: customers saw stale prices for up to a day after price changes (ticket SUP-881). Cache entries never expired.

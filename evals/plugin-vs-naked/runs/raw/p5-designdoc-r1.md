@@ -1,0 +1,1 @@
+I've written `design.md`, which covers the decisions you gave, a step-by-step request flow, and some additions of my own that you should review: fail open when Redis is down, a shadow-mode rollout, and open questions.

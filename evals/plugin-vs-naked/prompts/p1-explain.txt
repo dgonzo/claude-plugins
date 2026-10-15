@@ -1,0 +1,1 @@
+How does a database index speed up a query, and when does an index make things slower?
