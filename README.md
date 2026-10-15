@@ -20,4 +20,4 @@ Team repos, older Claude Code versions and installs without GitHub are in [INSTA
 |---|---|
 | [Writing](plugins/writing/README.md) | writing standard, working style, readability review, prose linter, lint hook |
 
-The Writing plugin cuts linter findings by 83 percent against a bare session. See [the plugin-vs-naked eval](evals/plugin-vs-naked/README.md).
+The Writing plugin cuts linter findings by about 75 percent against a bare session. See [the plugin-vs-naked eval](evals/plugin-vs-naked/README.md).

@@ -23,6 +23,29 @@
       "bold-heading": 1
     }
   },
+  "plugin-only": {
+    "outputs": 16,
+    "words_mean": 241,
+    "findings_total": 33,
+    "findings_per100w": 0.9,
+    "first_sentence_words_mean": 12.6,
+    "em_dash_total": 0,
+    "semicolon_total": 2,
+    "outputs_with_diagram": 6,
+    "outputs_with_table": 12,
+    "praise_openers": 0,
+    "ends_with_offer_or_question": 1,
+    "rules": {
+      "comma-stack": 2,
+      "bold-seasoning": 7,
+      "filler": 5,
+      "table-sentence": 8,
+      "long-sentence": 4,
+      "slash": 1,
+      "bold-heading": 4,
+      "hard-wrap": 2
+    }
+  },
   "naked": {
     "outputs": 16,
     "words_mean": 327,

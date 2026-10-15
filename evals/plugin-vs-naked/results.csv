@@ -15,6 +15,22 @@ plugin,p7-rewrite,1,reply,30,1,3.3,8,0,0,0,0,0,0,0,"{""filler"": 1}"
 plugin,p7-rewrite,2,reply,36,1,2.8,7,0,0,0,0,0,0,0,"{""filler"": 1}"
 plugin,p5-designdoc,1,file,473,0,0.0,18,0,0,1,4,0,0,0,{}
 plugin,p5-designdoc,2,file,466,0,0.0,12,0,0,1,5,0,0,0,{}
+plugin-only,p1-explain,1,reply,497,0,0.0,12,0,0,0,1,1,0,0,{}
+plugin-only,p1-explain,2,reply,458,4,0.9,13,0,0,0,2,1,0,0,"{""comma-stack"": 1, ""bold-seasoning"": 2, ""filler"": 1}"
+plugin-only,p2-debug,1,reply,321,4,1.2,12,0,1,0,2,0,0,0,"{""table-sentence"": 3, ""filler"": 1}"
+plugin-only,p2-debug,2,reply,315,3,1.0,20,0,1,0,1,0,0,0,"{""filler"": 1, ""long-sentence"": 1, ""bold-seasoning"": 1}"
+plugin-only,p3-decision,1,reply,353,5,1.4,23,0,0,0,2,1,0,0,"{""long-sentence"": 3, ""table-sentence"": 1, ""bold-seasoning"": 1}"
+plugin-only,p3-decision,2,reply,334,4,1.2,10,0,0,0,1,1,0,0,"{""table-sentence"": 1, ""slash"": 1, ""comma-stack"": 1, ""bold-seasoning"": 1}"
+plugin-only,p4-status,1,reply,168,3,1.8,13,0,0,0,1,0,0,0,"{""bold-heading"": 1, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin-only,p4-status,2,reply,167,7,4.2,6,0,0,0,1,0,0,0,"{""bold-heading"": 3, ""table-sentence"": 2, ""hard-wrap"": 1, ""bold-seasoning"": 1}"
+plugin-only,p5-designdoc,1,reply,23,0,0.0,18,0,0,0,0,0,0,0,{}
+plugin-only,p5-designdoc,2,reply,30,0,0.0,7,0,0,0,0,0,0,0,{}
+plugin-only,p6-pr,1,reply,152,1,0.7,13,0,0,0,1,0,0,0,"{""table-sentence"": 1}"
+plugin-only,p6-pr,2,reply,238,0,0.0,13,0,0,0,1,0,0,0,{}
+plugin-only,p7-rewrite,1,reply,28,1,3.6,8,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin-only,p7-rewrite,2,reply,29,1,3.4,8,0,0,0,0,0,0,0,"{""filler"": 1}"
+plugin-only,p5-designdoc,1,file,372,0,0.0,16,0,0,1,3,0,0,0,{}
+plugin-only,p5-designdoc,2,file,374,0,0.0,10,0,0,1,3,0,0,1,{}
 naked,p1-explain,1,reply,564,14,2.5,27,0,0,0,0,0,0,0,"{""long-sentence"": 5, ""slash"": 1, ""em-dash"": 1, ""bold-seasoning"": 3, ""comma-stack"": 2, ""filler"": 2}"
 naked,p1-explain,2,reply,653,24,3.7,26,0,0,0,0,0,0,0,"{""long-sentence"": 7, ""comma-stack"": 9, ""slash"": 2, ""filler"": 2, ""bold-seasoning"": 2, ""em-dash"": 1, ""parenthetical"": 1}"
 naked,p2-debug,1,reply,438,19,4.3,18,0,3,0,0,0,0,0,"{""colon-stack"": 3, ""filler"": 2, ""long-sentence"": 6, ""comma-stack"": 4, ""semicolon"": 1, ""bold-seasoning"": 2, ""em-dash"": 1}"

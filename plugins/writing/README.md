@@ -67,17 +67,17 @@ Project linter: <command, or none>.
 
 ## Measured effect
 
-The plugin cuts linter findings from 3.4 to 0.6 per 100 words. Seven prompts ran twice each, once with the plugin and once in a bare `--safe-mode` session. Full method and outputs are in [the plugin-vs-naked eval](../../evals/plugin-vs-naked/README.md).
+The plugin cuts linter findings from 3.4 to 0.9 per 100 words. Seven prompts ran twice each, once with only this plugin loaded and once in a bare `--safe-mode` session. Full method and outputs are in [the plugin-vs-naked eval](../../evals/plugin-vs-naked/README.md).
 
 | Measure | With plugin | Bare session |
 |---|---|---|
-| Linter findings per 100 words | 0.6 | 3.4 |
-| Long sentences | 2 | 43 |
+| Linter findings per 100 words | 0.9 | 3.4 |
+| Long sentences | 4 | 43 |
 | Outputs with a table | 12 of 16 | 2 of 16 |
-| Mean words in first sentence | 11.9 | 21.2 |
-| Cost for 14 runs | $4.61 | $1.17 |
+| Mean words in first sentence | 12.6 | 21.2 |
+| Cost for 14 runs | $1.52 | $1.17 |
 
-The bare model already avoids em-dashes and praise openers, and it leads with the point. The plugin's gain is shorter sentences and more tables and diagrams. The plugin session costs about four times as much per run.
+The bare model already avoids em-dashes and praise openers, and it leads with the point. The plugin's gain is shorter sentences and more tables and diagrams.
 
 ## Updating the rules
 

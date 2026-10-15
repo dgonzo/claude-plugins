@@ -39,8 +39,9 @@ def score(path, arm, prompt, rep, kind):
     return row
 
 
+ARMS = [a for a in ("plugin", "plugin-only", "naked") if (E / "runs" / a).is_dir()]
 rows = []
-for arm in ("plugin", "naked"):
+for arm in ARMS:
     for p in sorted((E / "runs" / arm).glob("*-r[0-9].md")):
         prompt, rep = p.stem.rsplit("-r", 1)
         rows.append(score(p, arm, prompt, rep, "reply"))
@@ -57,7 +58,7 @@ with open(E / "results.csv", "w", newline="") as f:
 
 # Aggregate per arm.
 agg = {}
-for arm in ("plugin", "naked"):
+for arm in ARMS:
     rs = [r for r in rows if r["arm"] == arm]
     n = len(rs)
     rules = collections.Counter()

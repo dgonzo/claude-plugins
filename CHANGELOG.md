@@ -6,7 +6,7 @@
 - Listings show "Writing" by David Gonzalez. The manifests also set a category and tags.
 - One-command install for Claude Code. INSTALL.md covers Cowork, team repos and release files.
 - Rule 10 bans "holds" and "carries" as vague verbs. Write "contains" or "applies" instead. The plugin's own text no longer uses them.
-- The plugin-vs-naked eval compares the plugin with a bare session. Its summary is in the plugin README.
+- The plugin-vs-naked eval compares the plugin with a bare session. Linter findings fall from 3.4 to 0.9 per 100 words. Its summary is in the plugin README.
 
 ## 2.0.0
 
