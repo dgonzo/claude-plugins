@@ -2,6 +2,12 @@
 
 The house writing standard and working style, as one plugin for every surface. Project tweaks live in a `WRITING.md` at the repo root.
 
+```
+/plugin install writing --marketplace dgonzo/dgonzo-plugins
+```
+
+Cowork, team repos and release files are in [INSTALL.md](../../INSTALL.md).
+
 ## The tiers
 
 ```mermaid
@@ -13,7 +19,7 @@ flowchart TD
   F[Tier 3: WRITING.md in the repo] -->|overrides| A
 ```
 
-| Tier | Where it lives | What it holds |
+| Tier | Where it lives | Contents |
 |---|---|---|
 | 1 plugin | this repo, installed from claude.ai | the full rules, the card, the linter, the hooks |
 | 2 global instruction | Cowork settings, chat preferences, `~/.claude/CLAUDE.md` | two lines that say load the plugin |
@@ -24,11 +30,11 @@ flowchart TD
 | Component | Name | Job |
 |---|---|---|
 | Skill | `writing-standard` | the prose rules and the check before you send |
-| Skill | `working-style` | session behaviour: answer first, no narration, do the work, hold the objective |
+| Skill | `working-style` | session behaviour: answer first, no narration, do the work, keep to the objective |
 | Skill | `improve-readability` | review one file, report findings, never edit |
 | Skill | `review-prose` | review a diff, a ref or a PR, report findings, never edit |
 | Command | `/writing:lint <file>` | run the linter on one file and print its output |
-| Card | `standard/card.md` | the rules that hold before any skill loads |
+| Card | `standard/card.md` | the short rules, loaded at session start before any skill |
 | Script | `scripts/writing_lint.py` | the mechanical rules, exit 0 always |
 | Hook | SessionStart | prints the card into the session context |
 | Hook | PostToolUse on Write and Edit | lints every Markdown file an agent writes and feeds findings back |
@@ -58,6 +64,20 @@ Added rules: <one per line, or none>.
 Relaxed rules: <one per line, or none. Example: no Mermaid, draw diagrams as Unicode box-drawing>.
 Project linter: <command, or none>.
 ```
+
+## Measured effect
+
+The plugin cuts linter findings from 3.4 to 0.6 per 100 words. Seven prompts ran twice each, once with the plugin and once in a bare `--safe-mode` session. Full method and outputs are in [the plugin-vs-naked eval](../../evals/plugin-vs-naked/README.md).
+
+| Measure | With plugin | Bare session |
+|---|---|---|
+| Linter findings per 100 words | 0.6 | 3.4 |
+| Long sentences | 2 | 43 |
+| Outputs with a table | 12 of 16 | 2 of 16 |
+| Mean words in first sentence | 11.9 | 21.2 |
+| Cost for 14 runs | $4.61 | $1.17 |
+
+The bare model already avoids em-dashes and praise openers, and it leads with the point. The plugin's gain is shorter sentences and more tables and diagrams. The plugin session costs about four times as much per run.
 
 ## Updating the rules
 

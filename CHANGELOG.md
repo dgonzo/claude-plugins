@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.0.1
+
+- The repo is now `dgonzo/dgonzo-plugins`. The old name redirects. The install ID stays `writing@dgonzo`.
+- Listings show "Writing" by David Gonzalez. The manifests also set a category and tags.
+- One-command install for Claude Code. INSTALL.md covers Cowork, team repos and release files.
+- Rule 10 bans "holds" and "carries" as vague verbs. Write "contains" or "applies" instead. The plugin's own text no longer uses them.
+- The plugin-vs-naked eval compares the plugin with a bare session. Its summary is in the plugin README.
+
 ## 2.0.0
 
 - One standard. The writing-standard skill is the single source, 14 rules. It gained the plain-word swap table and the say-it-once rule. Never hard-wrap is its own rule. Sentence caps and condition-before-command steps are in. New rule on names and numbers.

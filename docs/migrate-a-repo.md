@@ -12,7 +12,7 @@ Each repo stops carrying its own writing rules and points at the `writing` plugi
 ## Steps for one repo
 
 1. Install the plugin on your machine. Follow [INSTALL.md](../INSTALL.md). Verify with "what is the writing rule on bold".
-2. Find every file that carries writing rules:
+2. Find every file that contains writing rules:
 
 ```
 grep -rl -i -E 'writing standard|writing\.md|writing_lint' --include='*.md' --include='Makefile' --include='*.yml' .
@@ -21,7 +21,7 @@ grep -rl -i -E 'writing standard|writing\.md|writing_lint' --include='*.md' --in
 3. Replace the body of the repo's writing section with this line. Keep the heading. Delete everything else under it: the scope paragraph, the rule list and the check command.
 
 ```markdown
-Prose follows the `writing` plugin. Install: see its [INSTALL.md](https://github.com/dgonzo/claude-plugins/blob/main/INSTALL.md).
+Prose follows the `writing` plugin. Install: see its [INSTALL.md](https://github.com/dgonzo/dgonzo-plugins/blob/main/INSTALL.md).
 ```
 
 4. If the deleted list held a rule the plugin does not have, put it in `WRITING.md` at the repo root. Use the template below. If nothing is project-only, add no file.
@@ -70,7 +70,7 @@ The CI check reads `standards/writing.version`. It fetches the same two files fr
       - name: Compare the vendored standard and linter with the plugin release
         run: |
           version=$(cat standards/writing.version)
-          base="https://raw.githubusercontent.com/dgonzo/claude-plugins/v$version/plugins/writing"
+          base="https://raw.githubusercontent.com/dgonzo/dgonzo-plugins/v$version/plugins/writing"
           curl -fsSL "$base/skills/writing-standard/SKILL.md" | awk 'f==2{print} /^---$/{f++}' | sed '1{/^$/d;}' | diff - standards/writing.md
           curl -fsSL "$base/scripts/writing_lint.py" | diff - scripts/writing_lint.py
 ```
@@ -97,6 +97,6 @@ The bullet "Pair every ID with its plain name on first use" is Rule 11 in the pl
 ## Acceptance per repo
 
 - The repo has one writing section and its body is the one line from step 3.
-- The step 2 grep lists only the vendored copies and the files that carry the pointer. The Makefile and the CI workflow count as pointers.
+- The step 2 grep lists only the vendored copies and the files that contain the pointer. The Makefile and the CI workflow count as pointers.
 - `make sync-writing` leaves the tree unchanged on a repo that is in sync.
 - A fresh session in the repo answers "what is the writing rule on bold" from the plugin.

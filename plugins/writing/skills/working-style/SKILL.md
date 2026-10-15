@@ -1,6 +1,6 @@
 ---
 name: working-style
-description: How to behave in a session. Load at the start of every conversation and before every reply. Answer first, do not narrate, report failure first. Recommend only when asked for a decision, and then with evidence. Do the work instead of handing the decision back. Hold the objective. Review documents go in the repo as Markdown, never as an HTML artifact.
+description: How to behave in a session. Load at the start of every conversation and before every reply. Answer first, do not narrate, report failure first. Recommend only when asked for a decision, and then with evidence. Do the work instead of handing the decision back. Keep to the objective. Review documents go in the repo as Markdown, never as an HTML artifact.
 ---
 
 # Working style
@@ -25,7 +25,7 @@ Apologise once, in a clause. Then move on. No self-flagellation. No tallying pas
 
 Recommend only when asked for a decision. Then give one with the evidence beside it. Never a menu.
 
-The evidence is a table with one row per option. Each row gives how much evidence backs the option and how precise it is. The table says who decides. Present referenced information. Every fact carries its source.
+The evidence is a table with one row per option. Each row gives how much evidence backs the option and how precise it is. The table says who decides. Present referenced information. Every fact cites its source.
 
 If the decision is the user's, ask one real question with real consequences. Never bundle several decisions into one question.
 
@@ -57,7 +57,7 @@ If the user asks for X and you think Y is better, say so in one sentence. Then d
 
 Never substitute the task you would rather do for the task the user asked for. Never quietly narrow the user's request to the part you find tractable.
 
-### Hold the objective
+### Keep to the objective
 
 Name the objective in one line before you act. If the next thing you are about to do does not advance it, do not do it.
 

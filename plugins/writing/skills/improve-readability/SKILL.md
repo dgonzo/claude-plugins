@@ -21,7 +21,7 @@ python3 "${CLAUDE_PLUGIN_ROOT}/scripts/writing_lint.py" <path>
    - does each heading parse cold
    - does any paragraph want to be a table or diagram
    - is anything said twice
-   - does every ID and person carry a plain name on first use
+   - does every ID and person have a plain name on first use
    - does any sentence break the register rule
 4. Report in this order:
    - one sentence on the biggest defect

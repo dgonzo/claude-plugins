@@ -1,0 +1,55 @@
+{
+  "plugin": {
+    "outputs": 16,
+    "words_mean": 261,
+    "findings_total": 26,
+    "findings_per100w": 0.6,
+    "first_sentence_words_mean": 11.9,
+    "em_dash_total": 0,
+    "semicolon_total": 1,
+    "outputs_with_diagram": 6,
+    "outputs_with_table": 12,
+    "praise_openers": 0,
+    "ends_with_offer_or_question": 0,
+    "rules": {
+      "table-sentence": 4,
+      "passive": 1,
+      "colon-stack": 2,
+      "filler": 3,
+      "long-sentence": 2,
+      "comma-stack": 6,
+      "bold-seasoning": 5,
+      "hard-wrap": 2,
+      "bold-heading": 1
+    }
+  },
+  "naked": {
+    "outputs": 16,
+    "words_mean": 327,
+    "findings_total": 179,
+    "findings_per100w": 3.4,
+    "first_sentence_words_mean": 21.2,
+    "em_dash_total": 0,
+    "semicolon_total": 9,
+    "outputs_with_diagram": 3,
+    "outputs_with_table": 2,
+    "praise_openers": 0,
+    "ends_with_offer_or_question": 0,
+    "rules": {
+      "long-sentence": 43,
+      "slash": 12,
+      "em-dash": 7,
+      "bold-seasoning": 28,
+      "comma-stack": 43,
+      "filler": 14,
+      "parenthetical": 2,
+      "colon-stack": 9,
+      "semicolon": 2,
+      "heading-gloss": 3,
+      "bold-heading": 13,
+      "hard-wrap": 1,
+      "rule-of-three": 1,
+      "symbol": 1
+    }
+  }
+}

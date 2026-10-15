@@ -1,16 +1,23 @@
 # dgonzo plugins
 
-A personal plugin marketplace. One plugin so far: `writing`.
+Claude plugins by David Gonzalez. One so far: Writing. It adds a house writing standard and working style for chat, Cowork and Claude Code.
 
-Add it once from claude.ai. It then loads in chat, Cowork and Claude Code from the same install.
+## Install
 
-1. Open Customize, then Plugins.
-2. Select Add, then Add marketplace.
-3. Enter `dgonzo/claude-plugins`.
-4. Turn on Sync automatically so edits here reach every surface.
+Claude.ai and Cowork: open Customize > Plugins > Add > Add marketplace. Enter `dgonzo/dgonzo-plugins` and add Writing.
 
-Other install routes are in `INSTALL.md`, including one without GitHub access.
+Claude Code:
 
-| Plugin | What it carries |
+```
+claude plugin install writing --marketplace dgonzo/dgonzo-plugins
+```
+
+Team repos, older Claude Code versions and installs without GitHub are in [INSTALL.md](INSTALL.md).
+
+## Plugins
+
+| Plugin | Contents |
 |---|---|
-| `writing` | writing standard, working style, readability review, prose linter, lint hook |
+| [Writing](plugins/writing/README.md) | writing standard, working style, readability review, prose linter, lint hook |
+
+The Writing plugin cuts linter findings by 83 percent against a bare session. See [the plugin-vs-naked eval](evals/plugin-vs-naked/README.md).

@@ -1,0 +1,11 @@
+Our deploy failed. Here is the log. Why did it fail and what should I do?
+
+2026-10-14T03:02:11Z INFO  deploy start sha=9f3c1e2 env=staging
+2026-10-14T03:02:14Z INFO  pulling image registry.internal/api:9f3c1e2
+2026-10-14T03:02:41Z INFO  running migrations (alembic upgrade head)
+2026-10-14T03:02:43Z INFO  alembic: Running upgrade 4b1a -> 7c2d, add orders.customer_ref
+2026-10-14T03:02:58Z ERROR alembic: sqlalchemy.exc.OperationalError: (psycopg2.errors.LockNotAvailable) canceling statement due to lock timeout
+2026-10-14T03:02:58Z ERROR alembic: STATEMENT: ALTER TABLE orders ADD COLUMN customer_ref VARCHAR(64) NOT NULL DEFAULT ''
+2026-10-14T03:02:58Z INFO  pg_stat_activity: pid=88211 state=active query="VACUUM (ANALYZE) orders" started=2026-10-14T03:00:00Z
+2026-10-14T03:02:59Z ERROR deploy aborted: migration step exited 1
+2026-10-14T03:02:59Z INFO  rollback: no-op (no pods replaced)

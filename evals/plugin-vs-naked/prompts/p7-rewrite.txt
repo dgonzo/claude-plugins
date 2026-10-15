@@ -1,0 +1,3 @@
+Tighten this paragraph for our README. Output only the rewritten text.
+
+"Essentially, what this tool basically does is it takes your CSV files, which can be quite large in some cases, and it leverages a streaming approach in order to facilitate the conversion of them into Parquet format, which is really important because, as you probably know, Parquet is a columnar format that is significantly more efficient for analytical queries — and it also ensures that memory usage stays low, even for very large files, which is a crucial consideration for many users."
